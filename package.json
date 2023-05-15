@@ -4,16 +4,24 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app/app.js"
+    "start": "nodemon ./app/bin/www.js",
+    "build": "npx tailwindcss -i ./app/assets/css/input.css -o ./app/assets/css/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "knex": "^2.4.2",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-table-of-contents": "^0.6.0",
+    "morgan": "^1.10.0",
     "pg": "^8.10.0"
   },
   "devDependencies": {

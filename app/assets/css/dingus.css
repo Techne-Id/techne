@@ -1,0 +1,87 @@
+#bodyDiv h1.title {
+  font-family: monospace !important;
+  font-size: 120%;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+#bodyDiv pre#htmlpre {
+  height: 400px;
+  overflow: scroll;
+  resize: vertical;
+  width: 100%;
+}
+#bodyDiv pre#astpre {
+  height: 400px;
+  overflow: scroll;
+  resize: vertical;
+  width: 100%;
+}
+#bodyDiv div#preview {
+  height: 400px;
+  resize: vertical;
+  width: 100%;
+}
+#bodyDiv iframe {
+  height: 400px;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+}
+#bodyDiv div.row {
+  margin-top: 1em;
+}
+#bodyDiv blockquote {
+  font-size: 100%;
+}
+#bodyDiv footer {
+  color: #555;
+  text-align: center;
+  margin: 1em;
+}
+#bodyDiv pre {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8ff;
+}
+#bodyDiv #warnings li {
+  color: red;
+  font-weight: bold;
+}
+#bodyDiv label {
+  padding-left: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#bodyDiv div.timing {
+  color: gray;
+  visibility: hidden;
+  height: 2em;
+}
+#bodyDiv p#text-controls {
+  height: 1em;
+  margin-top: 1em;
+}
+#bodyDiv a#permalink {
+  margin-left: 1em;
+}
+#bodyDiv span.timing {
+  font-weight: bold;
+}
+#bodyDiv .selected {
+  background-color: #eeeeee;
+}
+#bodyDiv textarea#text {
+  width: 100%;
+  overflow: scroll;
+  resize: vertical;
+  height: 400px;
+  font-family: monospace;
+  white-space: pre;
+  word-wrap: normal;
+  background-color: white;
+  color: black;
+}
