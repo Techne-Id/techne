@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="Techne Indonesia" />
+    <meta name="description" content="Tempat belajar yang tidak untuk semua orang. Hanya mereka yang mau belajar yang datang kesini." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://techne.id/" />
+    <meta property="og:title" content="Techne Indonesia" />
+    <meta property="og:description" content="Tempat belajar yang tidak untuk semua orang. Hanya mereka yang mau belajar yang datang kesini." />
+    <meta property="og:image" content="https://techne.id/img/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://techne.id/" />
+    <meta property="twitter:title" content="Techne Indonesia" />
+    <meta property="twitter:description" content="Tempat belajar yang tidak untuk semua orang. Hanya mereka yang mau belajar yang datang kesini." />
+    <meta property="twitter:image" content="https://techne.id/img/logo.png" />
+
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/github-markdown-light.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <!-- <link rel="stylesheet" href="/css/dingus.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"> -->
+
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <title><%= title %></title>
+  </head>
+  <body class="min-h-screen bg-kuning text-gray-900 flex justify-center">
+    <%- include(body) %>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+
+    <!-- FILE JS -->
+    <% scripts.forEach(function(script){ %>
+    <script src="/js/<%= script %>"></script>
+    <% }) %>
+  </body>
+</html>

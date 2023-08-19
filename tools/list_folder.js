@@ -13,7 +13,7 @@ const folder = async function () {
 
   itung = 0;
   masuk = "/";
-  const path = String.raw`C:/Users/ichoi/OneDrive/Documents/ISHAMASHI/Project/materi`;
+  const path = String.raw`C:/Users/ishamashi/Documents/ISHAMASHI/Project/materi`;
 
   const select = async function () {
     let data = await Crud.get("materi", "*", "WHERE type = '1'");

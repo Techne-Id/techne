@@ -63,7 +63,7 @@ class MateriController {
     const parentPath = getDataParent.data[0].path;
 
     // const path = String.raw`C:/Users/ichoi/OneDrive/Documents/ISHAMASHI/Project/materi/intermediate_html_css/intermediate_html_concepts/emmet.md`;
-    const path = String.raw`C:/Users/ichoi/OneDrive/Documents/ISHAMASHI/Project/materi`;
+    const path = String.raw`C:/Users/ishamashi/Documents/ISHAMASHI/Project/materi`;
     // const testFolder = path + parentPath + "README.md";
     const testFolder = path + parentPath + "emmet.md";
 
