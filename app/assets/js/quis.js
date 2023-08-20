@@ -47,7 +47,6 @@ async function setSoal(data) {
             <input type="checkbox" class="rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" id="${element.id}_${key}" name="vehicle1" value="${key}"/> 
             <label for="${element.id}_${key}" class="text-biru mx-4"> ${escapedKey}</label>
           </div>`;
-          // html += `<div><input type='checkbox' value='${key}' class="flex flex-wrap w-full my-2 py-2 px-4 hover:bg-slate-200 rounded-lg text-biru">${escapedKey}</div><br>`;
         }
       }
       html += `
