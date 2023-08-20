@@ -60,6 +60,7 @@ function getChild(child) {
 }
 
 async function setMateri(data) {
+  console.log(data);
   judul = data.parent.name.replaceAll("_", " ").toUpperCase();
   $("#judul").html("MODUL " + judul);
 

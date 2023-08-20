@@ -1,20 +1,20 @@
 console.log("INI FILE MATERI JS EXTEND");
 
-$.ajax({
-  url: "/materi/get/4",
-  dataType: "json",
-  success: function (result) {
-    console.log("DATA: ", result);
-    result.data.forEach((item) => {
-      $("#materi").append(`
-      <span>
-      ${item.name}
-      </span>
-      </br>
-      `);
-    });
-  },
-});
+// $.ajax({
+//   url: "/materi/get/4",
+//   dataType: "json",
+//   success: function (result) {
+//     console.log("DATA: ", result);
+//     result.data.forEach((item) => {
+//       $("#materi").append(`
+//       <span>
+//       ${item.name}
+//       </span>
+//       </br>
+//       `);
+//     });
+//   },
+// });
 
 $.ajax({
   url: "/materi/markdown",
@@ -28,7 +28,7 @@ $.ajax({
 
     console.log("test", result.parse);
     // document.getElementById("markdowntest").innerHTML = marked.parse(result.raw);
-    document.getElementById("markdowntest").innerHTML = result.parse;
+    // document.getElementById("markdowntest").innerHTML = result.parse;
 
     // $("#markdown").html(result.parse);
   },
