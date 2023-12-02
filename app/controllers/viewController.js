@@ -36,6 +36,11 @@ class ViewController {
   async file(req, res, next) {
     res.render("layout", { body: "./page/file", title: "Techne Indonesia", scripts: ["file.js"] });
   }
+
+  // BARD PAGE
+  async bard(req, res, next) {
+    res.render("layout", { body: "./page/bard", title: "Techne Indonesia", scripts: ["bard.js"] });
+  }
 }
 
 module.exports = new ViewController();

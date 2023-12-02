@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require("../app");
+var app = require("../app.js");
 var debugLib = require("debug");
 var http = require("http");
 

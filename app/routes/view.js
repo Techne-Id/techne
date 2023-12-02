@@ -6,6 +6,8 @@ router.get("/", ViewController.index);
 router.get("/login", ViewController.login);
 router.get("/register", ViewController.register);
 
+router.get("/bard/:prompt", ViewController.bard);
+
 router.get("/belajar", ViewController.belajar);
 
 router.get("/belajar/modul", ViewController.modul);
