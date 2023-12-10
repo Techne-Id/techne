@@ -7,8 +7,38 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const bodyParser = require("body-parser");
 const indexRouter = require("./routes/index");
+const passport = require("passport");
+const GitHubStrategy = require("passport-github2").Strategy;
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
+const session = require("express-session");
 const app = express();
+
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: true,
+    secret: "SECRET",
+  })
+);
+
+passport.serializeUser(function (user, cb) {
+  cb(null, user);
+});
+
+passport.deserializeUser(function (obj, cb) {
+  cb(null, obj);
+});
+
+app.get("/success", (req, res) => res.send(userProfile));
+app.get("/error", (req, res) => res.send("error logging in"));
+
+require("./passport-google"); // Ubah sesuai dengan nama file konfigurasi strategi
+require("./passport-github"); // Ubah sesuai dengan nama file konfigurasi strategi
+
+// Middleware Passport.js
+app.use(passport.initialize());
+// app.use(passport.session());
 
 app.use(cors());
 app.use(morgan("dev"));

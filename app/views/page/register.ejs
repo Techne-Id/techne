@@ -7,20 +7,23 @@
       <h1 class="text-2xl xl:text-3xl font-extrabold">Sign up for Techne.ID</h1>
       <div class="w-full flex-1 mt-8">
         <div class="mx-auto max-w-xs">
-          <div class="flex py-4">
-            <input class="w-1/2 px-8 py-4 mr-1 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="email" placeholder="First Name" />
-            <input class="w-1/2 px-8 py-4 ml-1 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="email" placeholder="Last Name" />
-          </div>
-          <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="email" placeholder="Email" />
-          <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" type="password" placeholder="Password" />
-          <button class="mt-5 tracking-wide font-semibold bg-biru text-gray-100 w-full py-4 rounded-lg hover:shadow-xl transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-            <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-              <circle cx="8.5" cy="7" r="4" />
-              <path d="M20 8v6M23 11h-6" />
-            </svg>
-            <span class="ml-3"> Sign Up </span>
-          </button>
+          <form method="POST" id="registerForm">
+            <div class="flex py-4">
+              <input class="w-1/2 px-8 py-4 mr-1 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" id="first_name" name="first_name" type="text" placeholder="First Name" />
+              <input class="w-1/2 px-8 py-4 ml-1 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" id="last_name" name="last_name" type="text" placeholder="Last Name" />
+            </div>
+            <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" id="username" name="username" type="text" placeholder="Username" />
+            <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" id="email" name="email" type="email" placeholder="Email" />
+            <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5" id="password" name="password" type="password" placeholder="Password" />
+            <button type="submit" class="mt-5 tracking-wide font-semibold bg-biru text-gray-100 w-full py-4 rounded-lg hover:shadow-xl transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+              <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <path d="M20 8v6M23 11h-6" />
+              </svg>
+              <span class="ml-3"> Sign Up </span>
+            </button>
+          </form>
           <p class="mt-4 text-sm text-biru text-center">
             Already have an account?
             <a href="/login" class="border-b border-gray-500 border-dotted"> Sign in →</a>

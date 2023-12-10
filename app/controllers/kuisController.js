@@ -5,6 +5,7 @@ require("dotenv").config();
 class KuisController {
   async getByTags(req, res, next) {
     const tags = req?.params?.tags;
+    console.log(req);
 
     const apiKey = process.env.QUIZ_IO_API;
     const apiUrl = process.env.QUIZ_IO_URL;
@@ -22,7 +23,6 @@ class KuisController {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         res.status(200).json({ parse: data });
       })
       .catch((error) => {

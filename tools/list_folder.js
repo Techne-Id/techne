@@ -13,10 +13,10 @@ const folder = async function () {
 
   itung = 0;
   masuk = "/";
-  const path = String.raw`C:/Users/ishamashi/Documents/ISHAMASHI/Project/materi`;
+  const path = String.raw`C:/Users/ishamashi/Documents/ISHAMASHI/Project/final_materi`;
 
   const select = async function () {
-    let data = await Crud.get("materi", "*", "WHERE type = '1'");
+    let data = await Crud.get("materi", "*");
     data.forEach((element) => {
       var name = element["name"].replaceAll("_", "-");
       var split = element["path"].split("/");
@@ -25,11 +25,11 @@ const folder = async function () {
 
       var slug = element["name"].split(".")[0];
 
-      // if (element["parent"] == "0") {
-      // var slug = name;
-      // } else {
-      //   var slug = parent + "-" + name;
-      // }
+      if (element["parent"] == "0") {
+        var slug = name;
+      } else {
+        var slug = parent + "-" + name;
+      }
 
       console.log({ ID: element["id"], Name: name, Slug: slug, Parent: parent });
       Crud.update("materi", "slug", `'${slug}'`, `WHERE id = ${element["id"]}`);
@@ -53,7 +53,7 @@ const folder = async function () {
             input(masukbaru, itung);
           }
           Crud.input("materi", "id, parent, name, type, path", `${itung}, ${parent ? parent : 0}, '${file.name}', '${file.isDirectory() ? "0" : "1"}', '${masuk}'`);
-          // console.log({'name': file.name, directory: file.isDirectory(), path: masuk, parent: parent, id: itung})
+          // console.log({ name: file.name, directory: file.isDirectory(), path: masuk, parent: parent, id: itung });
         });
       }
     });
