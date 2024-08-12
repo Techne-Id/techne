@@ -8,7 +8,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/index", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/index", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
   async login(req, res, next) {
     res.render("blank", { body: "./page/login", title: "Techne Indonesia", scripts: ["login.js"] });
