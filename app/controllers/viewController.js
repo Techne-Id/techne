@@ -12,10 +12,12 @@ class ViewController {
     res.render("layout", { body: "./page/index", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
   async login(req, res, next) {
-    res.render("blank", { body: "./page/login", title: "Techne Indonesia", scripts: ["login.js"] });
+    var ads = ''
+    res.render("blank", { body: "./page/login", title: "Techne Indonesia", ads:ads, scripts: ["login.js"] });
   }
   async register(req, res, next) {
-    res.render("blank", { body: "./page/register", title: "Techne Indonesia", scripts: ["register.js"] });
+    var ads = ''
+    res.render("blank", { body: "./page/register", title: "Techne Indonesia", ads:ads, scripts: ["register.js"] });
   }
 
   // KUIS PAGE
@@ -25,7 +27,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/kuis", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/kuis", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
   async tags(req, res, next) {
     console.log(req.user);
@@ -33,7 +36,7 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/tags", title: "Techne Indonesia", data: { user: user }, scripts: ["quis.js"] });
+    res.render("layout", { body: "./page/tags", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["quis.js"] });
   }
   async soal(req, res, next) {
     console.log(req.user);
@@ -41,7 +44,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/soal", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/soal", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
 
   // BELAJAR PAGE
@@ -51,7 +55,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/belajar", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/belajar", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
   async modul(req, res, next) {
     console.log(req.user);
@@ -59,7 +64,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/materi", title: "Techne Indonesia", data: { user: user }, scripts: ["modul.js"] });
+    var ads = ''
+    res.render("layout", { body: "./page/materi", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["modul.js"] });
   }
   async materi(req, res, next) {
     console.log(req.user);
@@ -67,7 +73,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/modul", title: "Techne Indonesia", data: { user: user }, scripts: ["materi.js"] });
+    var ads = ''
+    res.render("layout", { body: "./page/modul", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["materi.js"] });
   }
   async file(req, res, next) {
     console.log(req.user);
@@ -75,7 +82,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/file", title: "Techne Indonesia", data: { user: user }, scripts: ["file.js"] });
+    var ads = ''
+    res.render("layout", { body: "./page/file", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["file.js"] });
   }
 
   // BARD PAGE
@@ -85,7 +93,8 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/bard", title: "Techne Indonesia", data: { user: user }, scripts: ["bard.js"] });
+    var ads = ''
+    res.render("layout", { body: "./page/bard", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["bard.js"] });
   }
 }
 
