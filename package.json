@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./app/bin/www.js",
-    "build": "npx tailwindcss -i ./app/assets/css/input.css -o ./app/assets/css/output.css --watch"
+    "watch": "npx tailwindcss -i ./app/assets/css/input.css -o ./app/assets/css/output.css --watch",
+    "build": "webpack",
+    "prod": "node dist/final.js"
   },
   "author": "",
   "license": "ISC",
@@ -34,7 +36,8 @@
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1",
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.5",
+    "webpack": "^5.93.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
