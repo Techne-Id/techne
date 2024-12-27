@@ -42,7 +42,7 @@ class Materi {
           reject({ code: 500, data: err });
         });
 
-      console.log({ code: 200, data: { child: child, parent: parent[0] } });
+      console.log("INI", { code: 200, data: { child: child, parent: parent[0] } });
       resolve({ code: 200, data: { child: child, parent: parent[0] } });
     });
   }
