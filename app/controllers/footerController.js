@@ -7,7 +7,8 @@ class FooterController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/privacyPolicy", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/privacyPolicy", title: "Techne Indonesia", ads:ads , data: { user: user }, scripts: [] });
   }
   async term(req, res, next) {
     console.log(req.user);
@@ -15,7 +16,8 @@ class FooterController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/term", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/term", title: "Techne Indonesia", ads:ads , data: { user: user }, scripts: [] });
   }
   async about(req, res, next) {
     console.log(req.user);
@@ -23,7 +25,8 @@ class FooterController {
     if (req.user) {
       var user = req.user;
     }
-    res.render("layout", { body: "./page/about", title: "Techne Indonesia", data: { user: user }, scripts: [] });
+    var ads = ''
+    res.render("layout", { body: "./page/about", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: [] });
   }
 }
 

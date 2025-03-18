@@ -36,6 +36,7 @@ class ViewController {
     if (req.user) {
       var user = req.user;
     }
+    var ads = ''
     res.render("layout", { body: "./page/tags", title: "Techne Indonesia", ads:ads, data: { user: user }, scripts: ["quis.js"] });
   }
   async soal(req, res, next) {
